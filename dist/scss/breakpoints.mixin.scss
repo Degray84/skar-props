@@ -1,0 +1,32 @@
+$xs: 599px;
+$sm: 600px;
+$md: 905px;
+$lg: 1440px;
+$xl: 1905px;
+@mixin breakpoint($size:md) {
+@if $size== xs {
+  @media (max-width: 599px) {
+    @content;
+  }
+}
+@if $size== sm {
+  @media (min-width: 600px) {
+    @content;
+  }
+}
+@if $size== md {
+  @media (min-width: 905px) {
+    @content;
+  }
+}
+@if $size== lg {
+  @media (min-width: 1440px) {
+    @content;
+  }
+}
+@if $size== xl {
+  @media (min-width: 1905px) {
+    @content;
+  }
+}
+}

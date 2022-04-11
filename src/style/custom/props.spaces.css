@@ -1,0 +1,12 @@
+:root {
+  --skr-base-space: 2px;
+  --skr-space-xs: calc(var(--skr-base-space) / 2);
+  --skr-space-1: var(--skr-base-space);
+  --skr-space-2: calc(var(--skr-base-space) * 2);
+  --skr-space-3: calc(var(--skr-base-space) * 3);
+  --skr-space-4: calc(var(--skr-base-space) * 4);
+  --skr-space-5: calc(var(--skr-base-space) * 5);
+  --skr-space-6: calc(var(--skr-base-space) * 6);
+  --skr-space-8: calc(var(--skr-base-space) * 8);
+  --skr-space-10: calc(var(--skr-base-space) * 10);
+}

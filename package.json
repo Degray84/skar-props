@@ -1,0 +1,59 @@
+{
+  "type": "module",
+  "name": "skar-props",
+  "author": "skarmind",
+  "license": "MIT",
+  "version": "1.0.1",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Playrix/skar-props.git"
+  },
+  "keywords": [
+    "css",
+    "utilities",
+    "variables",
+    "custom properties"
+  ],
+  "style": "dist/style/props.min.css",
+  "source": "src/index.js",
+  "main": "dist/props.cjs",
+  "module": "dist/props.module.js",
+  "exports": {
+    ".": {
+      "import": "./dist/props.module.js",
+      "require": "./dist/props.cjs",
+      "default": "./dist/props.cjs"
+    },
+    "./src": "./src/index.js",
+    "./src/colors": "./src/props.colors.js",
+    "./style": "./props.min.css"
+  },
+  "browserslist": [
+    "defaults"
+  ],
+  "scripts": {
+    "build": "npm run gen:op",
+    "bundle": "concurrently npm:lib:*",
+    "live": "live-server --open=example",
+    "test": "ava test/basic.test.cjs",
+    "gen:op": "cd build && node props.js",
+    "lib:js": "microbundle --no-sourcemap",
+    "lib:all": "postcss src/style/index.css -o dist/style/index.css",
+    "lib:fonts": "cpy src/fonts dist/fonts --flat",
+    "lib:scss": "cpy src/scss dist/scss --flat"
+  },
+  "devDependencies": {
+    "ava": "^3.15.0",
+    "concurrently": "^6.2.1",
+    "cpy-cli": "^4.1.0",
+    "cssnano": "^5.0.8",
+    "json": "^11.0.0",
+    "live-server": "^1.2.1",
+    "microbundle": "^0.13.3",
+    "postcss": "^8.3.9",
+    "postcss-cli": "^8.3.1",
+    "postcss-combine-duplicated-selectors": "^10.0.3",
+    "postcss-import": "^14.0.2",
+    "postcss-preset-env": "6.7.x"
+  }
+}

@@ -1,0 +1,83 @@
+@mixin display($size: "m") {
+  @if $size== "l" {
+    font-size: var(--display-l);
+    letter-spacing: -0.25px;
+    font-weight: 400;
+  }
+  @if $size== "m" {
+    font-size: var(--display-m);
+    font-weight: 400;
+  }
+  @if $size== "s" {
+    font-size: var(--display-s);
+    font-weight: 400;
+  }
+}
+
+@mixin headline($size: "m") {
+  @if $size== "l" {
+    font-size: var(--headline-l);
+    font-weight: 500;
+  }
+  @if $size== "m" {
+    font-size: var(--headline-m);
+    font-weight: 500;
+  }
+  @if $size== "s" {
+    font-size: var(--headline-s);
+    font-weight: 500;
+  }
+}
+
+@mixin title($size: "m") {
+  @if $size== "l" {
+    font-size: var(--title-l);
+    font-weight: 500;
+  }
+  @if $size== "m" {
+    font-size: var(--title-m);
+    letter-spacing: 0.1px;
+    font-weight: 500;
+  }
+  @if $size== "s" {
+    font-size: var(--title-s);
+    letter-spacing: 0.1px;
+    font-weight: 500;
+  }
+}
+
+@mixin label($size: "m") {
+  @if $size== "l" {
+    font-size: var(--label-l);
+    letter-spacing: 0.1px;
+    font-weight: 500;
+  }
+  @if $size== "m" {
+    font-size: var(--label-m);
+    letter-spacing: 0.2px;
+    font-weight: 500;
+  }
+  @if $size== "s" {
+    font-size: var(--label-s);
+    letter-spacing: 0.25px;
+    font-weight: 500;
+  }
+}
+
+@mixin body($size: "m") {
+  @if $size== "l" {
+    font-size: var(--body-l);
+    letter-spacing: 0.5px;
+    font-weight: 400;
+  }
+  @if $size== "m" {
+    font-size: var(--body-m);
+    letter-spacing: 0.15px;
+    font-weight: 400;
+  }
+  @if $size== "s" {
+    font-size: var(--body-s);
+    letter-spacing: 0.4px;
+    font-weight: 400;
+  }
+}

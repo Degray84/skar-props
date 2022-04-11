@@ -1,0 +1,25 @@
+:root {
+  --skr-base-font: 14px;
+  --text-scale-ratio: 1.15;
+  --display-l: calc(
+    var(--display-m) * var(--text-scale-ratio) * var(--text-scale-ratio)
+  );
+  --display-m: calc(var(--display-s) * var(--text-scale-ratio));
+  --display-s: calc(var(--headline-l) * var(--text-scale-ratio));
+  --headline-l: calc(var(--headline-m) * var(--text-scale-ratio));
+  --headline-m: calc(var(--headline-s) * var(--text-scale-ratio));
+  --headline-s: calc(var(--title-l) * var(--text-scale-ratio));
+  --title-l: calc(
+    var(--title-m) * var(--text-scale-ratio) * var(--text-scale-ratio)
+  );
+  --title-m: calc(var(--skr-base-font) * var(--text-scale-ratio));
+  --title-s: calc(var(--skr-base-font));
+  --label-l: calc(var(--skr-base-font));
+  --label-m: calc(var(--skr-base-font) / var(--text-scale-ratio));
+  --label-s: calc(
+    var(--skr-base-font) / var(--text-scale-ratio) / var(--text-scale-ratio)
+  );
+  --body-l: calc(var(--skr-base-font) * var(--text-scale-ratio));
+  --body-m: calc(var(--skr-base-font));
+  --body-s: calc(var(--skr-base-font) / var(--text-scale-ratio));
+}
